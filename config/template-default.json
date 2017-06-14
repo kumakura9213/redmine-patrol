@@ -1,0 +1,14 @@
+{
+  "redmine": {
+    "url": "https://XXX",
+    "api_key": "XXX"
+  },
+  "chatwork": {
+    "api_token": "XXX",
+    "target_room_id": "XXX"
+  },
+  "members": [
+    { "redmine_user_id": "XXX", "name": "Alice", "chatwork_member_id": "XXX"},
+    { "redmine_user_id": "XXX", "name": "Bob", "chatwork_member_id": "XXX"}
+  ]
+}
