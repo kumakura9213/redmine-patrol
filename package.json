@@ -4,7 +4,10 @@
   "description": "Patrol Redmine.",
   "main": "handler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --require intelli-espower-loader"
+  },
+  "directories": {
+    "test": "test/"
   },
   "keywords": [],
   "author": "kunii kazumichi",
@@ -16,6 +19,10 @@
     "request": "^2.81.0"
   },
   "devDependencies": {
-    "serverless": "^1.15.3"
+    "intelli-espower-loader": "^1.0.1",
+    "mocha": "^3.4.2",
+    "power-assert": "^1.4.4",
+    "serverless": "^1.15.3",
+    "sinon": "^2.3.4"
   }
 }
