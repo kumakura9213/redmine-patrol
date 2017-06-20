@@ -25,12 +25,19 @@ $ vi config/default.json
 ```sh
 $ cd redmine-patrol
 $ ./node_modules/.bin/sls config credentials --provider aws --key XXX --secret XXX
-$ ./node_modules/.bin/sls deploy -r ap-northeast-1 -v
+$ npm run deploy
 ```
 
-## Cleanup
+## How to cleanup
 
 ```sh
 $ cd redmine-patrol
-$ ./node_modules/.bin/sls remove -v
+$ npm run remove
+```
+
+## How to test
+
+```sh
+$ cd redmine-patrol
+$ npm test
 ```
