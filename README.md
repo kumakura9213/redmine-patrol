@@ -1,5 +1,7 @@
 # redmine-patrol
 
+[![CircleCI](https://circleci.com/gh/kumakura9213/redmine-patrol.svg?style=svg)](https://circleci.com/gh/kumakura9213/redmine-patrol)
+
 これは「Redmineに今日の作業記録を書いていない人にチャットワークで作業記録を書くようお願いするLambda関数」です。
 
 ## How to deploy
