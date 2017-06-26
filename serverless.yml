@@ -19,6 +19,7 @@ frameworkVersion: "=1.15.3"
 
 custom:
   defaultStage: dev
+  environment: ${file(./env.yml)}
 
 provider:
   name: aws
@@ -50,14 +51,9 @@ provider:
 #  environment:
 #    variable1: value1
 
-# you can add packaging information here
-#package:
-#  include:
-#    - include-me.js
-#    - include-me-dir/**
-#  exclude:
-#    - exclude-me.js
-#    - exclude-me-dir/**
+package:
+  exclude:
+    - test/**
 
 functions:
   report:
@@ -65,6 +61,7 @@ functions:
     description: Report to Chatwork.
     memorySize: 128
     timeout: 15
+    environment: ${self:custom.environment.${self:provider.stage}}
     events:
       - schedule: cron(50 9 * * ? *)
 
@@ -100,14 +97,8 @@ functions:
 #    environment:
 #      variable2: value2
 
-# you can add CloudFormation resource templates here
-#resources:
-#  Resources:
-#    NewResource:
-#      Type: AWS::S3::Bucket
-#      Properties:
-#        BucketName: my-new-bucket
-#  Outputs:
-#     NewOutput:
-#       Description: "Description for the output"
-#       Value: "Some output value"
+resources:
+  Resources:
+    ReportLogGroup:
+      Properties:
+        RetentionInDays: "30"

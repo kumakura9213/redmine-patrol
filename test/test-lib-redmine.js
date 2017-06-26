@@ -1,5 +1,6 @@
 'use strict';
 
+require('dotenv').config({ path: './test/.env' });
 const assert = require("power-assert");
 const getTimeEntriesCount = require("./../lib/redmine.js").getTimeEntriesCount;
 

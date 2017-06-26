@@ -1,5 +1,6 @@
 'use strict';
 
+require('dotenv').config({ path: './test/.env' });
 const assert = require("power-assert");
 const buildMessageForChatwork = require("./../lib/chatwork.js").buildMessageForChatwork;
 const sendMessageToChatwork = require("./../lib/chatwork.js").sendMessageToChatwork;
@@ -27,8 +28,7 @@ describe('lib/chatwork.js', () => {
     ]));
   });
 
-  // TODO configを環境変数で置き換えた後、テスト用のルーム等を指定できるようになったら、以下のテストを開放する。
-  // it('sendMessageToChatwork return Promise', () => {
-  //   assert(sendMessageToChatwork('test') instanceof Promise);
-  // });
+  it('sendMessageToChatwork return Promise', () => {
+    assert(sendMessageToChatwork('sendMessageToChatwork return Promise') instanceof Promise);
+  });
 });
