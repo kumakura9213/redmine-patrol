@@ -18,6 +18,8 @@ $ npm install
 
 ```sh
 $ cd redmine-patrol
+$ cp template-env.yml env.yml
+$ vi env.yml
 $ cp config/template-default.json config/default.json
 $ vi config/default.json
 ```
@@ -27,19 +29,31 @@ $ vi config/default.json
 ```sh
 $ cd redmine-patrol
 $ ./node_modules/.bin/sls config credentials --provider aws --key XXX --secret XXX
-$ npm run deploy
+
+# deploy for development
+$ npm run deploy-dev
+
+# deploy for production
+$ npm run deploy-production
 ```
 
 ## How to cleanup
 
 ```sh
 $ cd redmine-patrol
-$ npm run remove
+
+# remove for development
+$ npm run remove-dev
+
+# remove for production
+$ npm run remove-production
 ```
 
 ## How to test
 
 ```sh
 $ cd redmine-patrol
+$ cp test/.template-env test/.env
+$ vi test/.env
 $ npm test
 ```

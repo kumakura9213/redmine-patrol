@@ -1,5 +1,6 @@
 'use strict';
 
+require('dotenv').config({ path: './test/.env' });
 const assert = require("power-assert");
 const sinon = require("sinon");
 const success = require("./../lib/response.js").success;

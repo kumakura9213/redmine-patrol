@@ -8,5 +8,9 @@ jspm_packages
 # temp files from editors
 nbproject/
 
+# env
+env.yml
+test/.env
+
 # config
 config/default.json
